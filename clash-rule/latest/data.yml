@@ -1,0 +1,41 @@
+additionalProperties:
+  formFields:
+    - edit: true
+      envKey: RULE_HOST
+      labelEn: "Rule Host"
+      labelZh: "规则服务地址"
+      label:
+        en: "Rule Host"
+        es-es: "Host de reglas"
+        ja: "ルール配信ホスト"
+        ms: "Host Peraturan"
+        pt-br: "Host de regras"
+        ru: "Хост правил"
+        ko: "규칙 호스트"
+        zh-Hant: "規則服務位址"
+        zh: "规则服务地址"
+        tr: "Kural Sunucu Adresi"
+      description:
+        en: "Address written into the generated local rule file. A plain IP/hostname is combined with the rule web port; a full http(s):// URL is used as the rule service address as-is."
+        zh: "生成本地规则文件时写入的地址。纯 IP/域名时会拼接规则网页端口；填写完整 http(s):// 地址时直接作为规则服务地址。"
+      required: true
+      rule: paramCommon
+      type: text
+    - default: 20666
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Rule Web Port"
+      labelZh: "规则网页端口"
+      label:
+        en: "Rule Web Port"
+        es-es: "Puerto web de reglas"
+        ja: "ルール Web ポート"
+        ms: "Port Web Peraturan"
+        pt-br: "Porta web de regras"
+        ru: "Веб-порт правил"
+        ko: "규칙 웹 포트"
+        zh-Hant: "規則網頁埠"
+        zh: "规则网页端口"
+        tr: "Kural Web Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number

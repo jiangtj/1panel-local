@@ -1,0 +1,31 @@
+name: Fast Note Sync
+tags:
+  - 云存储
+title: Fast Note Sync - Obsidian 私有笔记同步服务
+description: Fast Note Sync - Obsidian 私有笔记同步服务
+additionalProperties:
+  key: fns
+  name: Fast Note Sync
+  description:
+    en: Fast Note Sync Service is a self-hosted sync server for Obsidian vaults, with a web admin panel, version history, recycle bin, sharing links and REST API / MCP.
+    zh: Fast Note Sync Service 是自托管的 Obsidian 笔记库同步服务，提供网页管理后台、历史版本、回收站、分享链接以及 REST API / MCP。
+    zh-Hant: Fast Note Sync Service 是自架的 Obsidian 筆記庫同步服務，提供網頁管理後台、歷史版本、回收站、分享連結以及 REST API / MCP。
+    ja: Fast Note Sync Service は、Obsidian 保管庫のセルフホスト型同期サーバーです。Web 管理画面、履歴バージョン、ごみ箱、共有リンク、REST API / MCP を備えます。
+    ko: Fast Note Sync Service는 Obsidian 보관함을 위한 자체 호스팅 동기화 서버로, 웹 관리 화면, 버전 기록, 휴지통, 공유 링크와 REST API / MCP를 제공합니다.
+    ru: Fast Note Sync Service — самостоятельно размещаемый сервер синхронизации хранилищ Obsidian с веб-панелью управления, историей версий, корзиной, ссылками для общего доступа и REST API / MCP.
+    ms: Fast Note Sync Service ialah pelayan penyegerakan kendiri untuk bilik kebal Obsidian, dengan panel pentadbir web, sejarah versi, tong sampah, pautan perkongsian dan REST API / MCP.
+    pt-br: O Fast Note Sync Service é um servidor de sincronização auto-hospedado para cofres do Obsidian, com painel web de administração, histórico de versões, lixeira, links de compartilhamento e REST API / MCP.
+  tags:
+    - Storage
+  shortDescZh: Obsidian 私有笔记同步服务
+  shortDescEn: Self-hosted sync server for Obsidian vaults
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/haierkeys/fast-note-sync-service
+  github: https://github.com/haierkeys/fast-note-sync-service
+  document: https://github.com/haierkeys/fast-note-sync-service
+  architectures:
+    - amd64
+    - arm64

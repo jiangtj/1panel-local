@@ -1,0 +1,32 @@
+name: "Clash Rule"
+tags:
+  - Tool
+title: "Clash Rule - 本地 ACL4SSR 规则服务"
+description: "ACL4SSR 本地规则网页服务，打包为 1Panel 应用。"
+additionalProperties:
+  key: clash-rule
+  name: "Clash Rule"
+  tags:
+    - Tool
+  shortDescZh: "ACL4SSR 本地规则网页服务，打包为 1Panel 应用。"
+  shortDescEn: "Local ACL4SSR rule web server, shipped as a 1Panel app."
+  description:
+    en: "Local ACL4SSR rule web server, shipped as a 1Panel app."
+    es-es: "Servidor web local de reglas ACL4SSR, empaquetado como app de 1Panel."
+    ja: "ACL4SSR ルールのローカル Web サーバー（1Panel アプリ）。"
+    ms: "Pelayan web peraturan ACL4SSR tempatan, dibungkus sebagai aplikasi 1Panel."
+    pt-br: "Servidor web local de regras ACL4SSR, empacotado como app do 1Panel."
+    ru: "Локальный веб-сервер правил ACL4SSR, упакованный как приложение 1Panel."
+    ko: "ACL4SSR 규칙 로컬 웹 서버(1Panel 앱)."
+    zh-Hant: "ACL4SSR 本地規則網頁服務，打包為 1Panel 應用。"
+    zh: "ACL4SSR 本地规则网页服务，打包为 1Panel 应用。"
+    tr: "Yerel ACL4SSR kural web sunucusu, 1Panel uygulaması olarak paketlenmiştir."
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://github.com/ACL4SSR/ACL4SSR
+  github: https://github.com/ACL4SSR/ACL4SSR
+  document: https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config

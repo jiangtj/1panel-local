@@ -1,0 +1,90 @@
+additionalProperties:
+  formFields:
+    - default: 3430
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web UI Port"
+      labelZh: "网页端口"
+      label:
+        en: "Web UI Port"
+        es-es: "Puerto de la interfaz web"
+        ja: "Web UI ポート"
+        ms: "Port Web UI"
+        pt-br: "Porta da interface web"
+        ru: "Порт веб-интерфейса"
+        ko: "웹 UI 포트"
+        zh-Hant: "網頁介面埠"
+        zh: "网页端口"
+        tr: "Web Arayüzü Bağlantı Noktası"
+      description:
+        en: "Host port mapped to the container port 3430, which serves magpie's web UI. Keep it behind a reverse proxy with TLS, or reach it over a VPN or SSH tunnel, because the page itself has no HTTPS."
+        zh: "映射到容器 3430 端口的宿主机端口，用于 magpie 的 Web 界面。页面本身没有 HTTPS，建议放在带 TLS 的反向代理后面，或通过 VPN / SSH 隧道访问。"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 3425
+      edit: true
+      envKey: PANEL_APP_PORT_GATEWAY
+      labelEn: "Gateway Port"
+      labelZh: "网关端口"
+      label:
+        en: "Gateway Port"
+        es-es: "Puerto de la pasarela"
+        ja: "ゲートウェイポート"
+        ms: "Port Gerbang"
+        pt-br: "Porta do gateway"
+        ru: "Порт шлюза"
+        ko: "게이트웨이 포트"
+        zh-Hant: "閘道埠"
+        zh: "网关端口"
+        tr: "Ağ Geçidi Bağlantı Noktası"
+      description:
+        en: "Host port mapped to the container port 3425, the gateway that agents call. Requests from outside the container must send an enabled gateway key; prefer a VPN instead of exposing it to the internet."
+        zh: "映射到容器 3425 端口的宿主机端口，即 Agent 调用的网关。容器外的请求必须携带启用的网关密钥；跨互联网访问建议使用 VPN 而不是直接开放该端口。"
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: MAGPIE_WEB_KEY
+      labelEn: "Web Key"
+      labelZh: "Web 密钥"
+      label:
+        en: "Web Key"
+        es-es: "Clave web"
+        ja: "Web キー"
+        ms: "Kunci Web"
+        pt-br: "Chave da web"
+        ru: "Веб-ключ"
+        ko: "웹 키"
+        zh-Hant: "網頁金鑰"
+        zh: "Web 密钥"
+        tr: "Web Anahtarı"
+      description:
+        en: "Key for the web UI, 16 or more characters. Set it to keep the same key across restarts and stay signed in; leave it empty and magpie generates a new key on every start. The page address with the key is printed in the container logs."
+        zh: "Web 界面的密钥，16 个字符以上。填写后重启密钥不变、浏览器保持登录；留空则每次启动都会生成新密钥。带密钥的页面地址会打印在容器日志里。"
+      required: false
+      rule: paramCommon
+      type: password
+    - default: ""
+      edit: true
+      envKey: MAGPIE_PUBLIC_URL
+      labelEn: "Public Gateway URL"
+      labelZh: "网关公网地址"
+      label:
+        en: "Public Gateway URL"
+        es-es: "URL publica de la pasarela"
+        ja: "ゲートウェイ公開URL"
+        ms: "URL Gerbang Awam"
+        pt-br: "URL publica do gateway"
+        ru: "Публичный URL шлюза"
+        ko: "게이트웨이 공개 URL"
+        zh-Hant: "閘道公開網址"
+        zh: "网关公网地址"
+        tr: "Genel Ag Gecidi URL'si"
+      description:
+        en: "Address other machines use to reach the gateway, for example http://192.168.1.20:3425 (host or NAS address plus the gateway port), or the base URL of a reverse proxy. Leave it empty to let magpie print the container's own address."
+        zh: "其他机器访问网关时使用的地址，例如 http://192.168.1.20:3425（宿主机或 NAS 的地址加网关端口），或反向代理的 base URL。留空则 magpie 打印容器自身的地址。"
+      required: false
+      rule: paramCommon
+      type: text

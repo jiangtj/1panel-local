@@ -1,0 +1,20 @@
+additionalProperties:
+  formFields:
+    - default: 25500
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Subconverter Port"
+      labelZh: "订阅转换端口"
+      label:
+        en: "Subconverter Port"
+        es-es: "Puerto de subconverter"
+        ja: "subconverter ポート"
+        ms: "Port subconverter"
+        pt-br: "Porta do subconverter"
+        ru: "Порт subconverter"
+        ko: "subconverter 포트"
+        zh-Hant: "訂閱轉換埠"
+        zh: "订阅转换端口"
+        tr: "Subconverter Bağlantı Noktası"
+      required: true
+      rule: paramPort
+      type: number

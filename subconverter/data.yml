@@ -1,0 +1,32 @@
+name: Subconverter
+tags:
+  - Tool
+title: "Subconverter - 订阅转换服务"
+description: "Clash 订阅转换服务，打包为 1Panel 应用。"
+additionalProperties:
+  key: subconverter
+  name: Subconverter
+  tags:
+    - Tool
+  shortDescZh: "Clash 订阅转换服务，打包为 1Panel 应用。"
+  shortDescEn: "Clash subscription conversion service, shipped as a 1Panel app."
+  description:
+    en: "Clash subscription conversion service, shipped as a 1Panel app."
+    es-es: "Servicio de conversión de suscripciones Clash, empaquetado como app de 1Panel."
+    ja: "Clash サブスクリプション変換サービス（1Panel アプリ）。"
+    ms: "Perkhidmatan penukaran langganan Clash, dibungkus sebagai aplikasi 1Panel."
+    pt-br: "Serviço de conversão de assinaturas Clash, empacotado como app do 1Panel."
+    ru: "Сервис преобразования подписок Clash, упакованный как приложение 1Panel."
+    ko: "Clash 구독 변환 서비스(1Panel 앱)."
+    zh-Hant: "Clash 訂閱轉換服務，打包為 1Panel 應用。"
+    zh: "Clash 订阅转换服务，打包为 1Panel 应用。"
+    tr: "Clash abonelik dönüştürme servisi, 1Panel uygulaması olarak paketlenmiştir."
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://github.com/Aethersailor/subconverter
+  github: https://github.com/Aethersailor/subconverter
+  document: https://github.com/Aethersailor/subconverter/wiki

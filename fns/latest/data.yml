@@ -1,0 +1,16 @@
+additionalProperties:
+  formFields:
+    - default: 9000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web Port
+      labelZh: 网页端口
+      label:
+        en: 'Web Port'
+        zh: '网页端口'
+      description:
+        en: 'Host port mapped to the container port 9000, which serves the web admin panel, the RESTful API and the sync WebSocket endpoint. The 1Panel reverse proxy target is http://127.0.0.1:this-port.'
+        zh: '映射到容器 9000 端口的宿主机端口，同时提供网页管理后台、RESTful API 和同步 WebSocket 接口。1Panel 反向代理目标为 http://127.0.0.1:此端口。'
+      required: true
+      rule: paramPort
+      type: number
