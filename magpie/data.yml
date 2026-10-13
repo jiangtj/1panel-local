@@ -8,6 +8,7 @@ additionalProperties:
   key: magpie
   name: magpie
   tags:
+    - AI
     - Tool
   shortDescZh: "多 Agent 统一的模型网关，支持 OpenAI / Anthropic / Gemini 互转"
   shortDescEn: "One local gateway that lets any coding agent use any provider's model"
