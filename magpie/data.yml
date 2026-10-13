@@ -6,7 +6,7 @@ title: "magpie - 多 Agent 模型网关"
 description: "magpie 在本地运行一个网关，同时支持 OpenAI、Anthropic 和 Gemini 三种 API 并互相转换，让任何编码 Agent 都能使用任意厂商的模型。本应用以 Docker 方式运行 magpie 网关及其 Web 界面，并可在浏览器中管理。"
 additionalProperties:
   key: magpie
-  name: magpie
+  name: Magpie
   tags:
     - AI
     - Tool
