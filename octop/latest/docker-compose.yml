@@ -1,6 +1,6 @@
 services:
   octop:
-    image: ghcr.io/tencentcloud/octop:latest
+    image: ghcr.nju.edu.cn/tencentcloud/octop:latest
     container_name: "${CONTAINER_NAME}"
     restart: always
     networks:
@@ -26,6 +26,11 @@ services:
       retries: 3
     labels:
       createdBy: Apps
+      com.centurylinklabs.watchtower.enable: "true"
+      watchcow.enable: "true"
+      watchcow.title: "Octop"
+      watchcow.service_port: "${PANEL_APP_PORT_HTTP}"
+      watchcow.icon: "file:///opt/1panel/resource/apps/local/octop/logo.png"
 networks:
   1panel-network:
     external: true
