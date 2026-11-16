@@ -1,6 +1,6 @@
 services:
   octop:
-    image: ghcr.nju.edu.cn/tencentcloud/octop:latest
+    image: ghcr.nju.edu.cn/tencentcloud/octop:full
     container_name: "${CONTAINER_NAME}"
     restart: always
     networks:
