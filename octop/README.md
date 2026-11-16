@@ -6,6 +6,8 @@
 
 <img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/img/wechat.png" width="150" height="150">
 
+本应用基于 [1Panel 官方应用商店中的 Octop 应用](https://github.com/1Panel-dev/appstore/tree/dev/apps/octop) 配置。容器使用国内镜像 `ghcr.nju.edu.cn/tencentcloud/octop:full`（包含 Web 桌面），并带有 Watchcow 与 Watchtower 自动更新标签。
+
 ## 主要功能
 
 - **多用户多 Agent**：一个实例内创建多个用户与 Agent，内置专家库与专家市场，按场景切换专业角色。
