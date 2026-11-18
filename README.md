@@ -1,7 +1,12 @@
 # 1panel-local
 1panel 的一些自定义的应用
 
-包含应用：Clash Rule、Subconverter、Fast Note Sync、Magpie、Octop、Cloudflare Mesh。Octop 是腾讯云开源的自托管 AI 助手，支持多用户、多 Agent、长期记忆、知识库和多渠道接入；本地应用说明见 [octop/README.md](./octop/README.md)。Cloudflare Mesh 把服务器接入 Cloudflare 的网状网络并可作为转发网关，说明见 [cloudflare-mesh/README.md](./cloudflare-mesh/README.md)。
+- **[Clash Rule](./clash-rule/README.md)**：ACL4SSR 本地规则网页服务，供 Clash / mihomo 客户端拉取分流规则。
+- **[Subconverter](./subconverter/README.md)**：订阅转换服务，把各类代理订阅转换为 Clash 等客户端可用的配置。
+- **[Fast Note Sync](./fns/README.md)**：自托管的 Obsidian 笔记库同步服务，提供网页管理后台、历史版本、回收站、分享链接与 REST API / MCP。
+- **[Magpie](./magpie/README.md)**：本地模型网关，同时支持 OpenAI、Anthropic 与 Gemini API 并互相转换，让任意编码 Agent 使用任意厂商的模型。
+- **[Octop](./octop/README.md)**：腾讯云开源的自托管 AI 助手，支持多用户、多 Agent、长期记忆、知识库和多渠道接入。
+- **[Cloudflare Mesh](./cloudflare-mesh/README.md)**：把服务器接入 Cloudflare 的网状网络，并可作为转发网关为其他设备提供出网能力。
 
 ## 一键部署
 
