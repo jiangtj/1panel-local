@@ -1,0 +1,40 @@
+name: Sync to CNB
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-cnb
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Sync to CNB
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # 标签触发时检出 master，避免 detached HEAD 无法推送分支
+          ref: ${{ github.ref_type == 'tag' && 'master' || github.ref }}
+
+      - name: Sync to CNB
+        uses: docker://tencentcom/git-sync
+        env:
+          PLUGIN_TARGET_URL: https://cnb.cool/${{ vars.CNB_REPO || 'jiangtj/1panel-local' }}.git
+          PLUGIN_AUTH_TYPE: https
+          PLUGIN_USERNAME: cnb
+          PLUGIN_PASSWORD: ${{ secrets.CNB_TOKEN }}
+          PLUGIN_PUSH_TAGS: "true"
+          PLUGIN_FORCE: "false"
+          PLUGIN_GIT_USER: GitHub Actions
+          PLUGIN_GIT_EMAIL: actions@github.com
