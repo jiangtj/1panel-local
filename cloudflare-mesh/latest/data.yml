@@ -17,9 +17,8 @@ additionalProperties:
         zh: "Mesh 节点令牌"
         tr: "Mesh Dugum Belirteci"
       description:
-        en: "Node token issued for this node in the Cloudflare dashboard (Zero Trust → Networks → Mesh). The node uses it to join the mesh; keep it secret and rotate it in the dashboard if it leaks."
-        zh: "在 Cloudflare 控制台（Zero Trust → Networks → Mesh）为该节点签发的节点令牌，节点用它接入网状网络。请妥善保管，泄露后在控制台重置。"
-        zh-Hant: "在 Cloudflare 控制台（Zero Trust → Networks → Mesh）為該節點簽發的節點權杖，節點用它接入網狀網路。請妥善保管，洩露後在控制台重置。"
+        en: "Node token issued for this node in the Cloudflare dashboard (Zero Trust → Networks → Mesh). The node uses it to join the mesh; keep it secret and rotate it in the dashboard if it leaks. Paste it as-is: any length and characters are accepted."
+        zh: "在 Cloudflare 控制台（Zero Trust → Networks → Mesh）为该节点签发的节点令牌，节点用它接入网状网络。请妥善保管，泄露后在控制台重置。原样粘贴即可，不限长度和字符。"
+        zh-Hant: "在 Cloudflare 控制台（Zero Trust → Networks → Mesh）為該節點簽發的節點權杖，節點用它接入網狀網路。請妥善保管，洩露後在控制台重置。原樣貼上即可，不限長度與字元。"
       required: true
-      rule: paramCommon
       type: password
