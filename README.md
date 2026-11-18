@@ -1,7 +1,7 @@
 # 1panel-local
 1panel 的一些自定义的应用
 
-包含应用：Clash Rule、Subconverter、Fast Note Sync、Magpie、Octop。Octop 是腾讯云开源的自托管 AI 助手，支持多用户、多 Agent、长期记忆、知识库和多渠道接入；本地应用说明见 [octop/README.md](./octop/README.md)。
+包含应用：Clash Rule、Subconverter、Fast Note Sync、Magpie、Octop、Cloudflare Mesh。Octop 是腾讯云开源的自托管 AI 助手，支持多用户、多 Agent、长期记忆、知识库和多渠道接入；本地应用说明见 [octop/README.md](./octop/README.md)。Cloudflare Mesh 把服务器接入 Cloudflare 的网状网络并可作为转发网关，说明见 [cloudflare-mesh/README.md](./cloudflare-mesh/README.md)。
 
 ## 一键部署
 
@@ -37,4 +37,4 @@ DEST_DIR=/opt/1panel/resource/apps/local sudo -E bash install.sh
 
 ## 手动部署
 
-不使用脚本时，也可自行下载仓库归档，把其中的应用目录（`clash-rule`、`fns`、`magpie`、`octop`、`subconverter`）复制到 `/opt/1panel/resource/apps/local` 下，再按上面的方式更新应用列表。
+不使用脚本时，也可自行下载仓库归档，把其中的应用目录（`clash-rule`、`cloudflare-mesh`、`fns`、`magpie`、`octop`、`subconverter`）复制到 `/opt/1panel/resource/apps/local` 下，再按上面的方式更新应用列表。

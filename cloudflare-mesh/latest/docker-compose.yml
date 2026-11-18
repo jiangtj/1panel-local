@@ -1,0 +1,27 @@
+services:
+  cloudflare-mesh:
+    image: cloudflare/mesh:latest
+    container_name: "${CONTAINER_NAME}"
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    sysctls:
+      net.ipv4.ip_forward: "1"
+      net.ipv6.conf.all.forwarding: "1"
+      net.ipv6.conf.default.forwarding: "1"
+    environment:
+      MESH_NODE_TOKEN: "${MESH_NODE_TOKEN}"
+      SRCNAT_ENABLED: "true"
+    volumes:
+      - ./data:/var/lib/cloudflare-warp
+    labels:
+      createdBy: Apps
+      com.centurylinklabs.watchtower.enable: "true"
+networks:
+  1panel-network:
+    external: true
