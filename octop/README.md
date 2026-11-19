@@ -2,11 +2,13 @@
 
 **Octop** 是腾讯云开源的自托管 AI 助手，面向个人、家庭与小团队，提供多用户、多 Agent 协作，内置长期记忆、知识库与多渠道接入，数据保存在本机。
 
+本应用提供 `full`（完整版，含远程桌面控制、OCR 与本地嵌入模型）与 `latest`（标准版，镜像体积更小）两个版本。
+
 **扫码加入交流群**
 
 <img alt="扫码加入交流群" src="https://resource.fit2cloud.com/1panel/img/wechat.png" width="150" height="150">
 
-本应用基于 [1Panel 官方应用商店中的 Octop 应用](https://github.com/1Panel-dev/appstore/tree/dev/apps/octop) 配置。容器使用国内镜像 `ghcr.nju.edu.cn/tencentcloud/octop:full`（包含 Web 桌面），并带有 Watchcow 与 Watchtower 自动更新标签。
+本应用基于 [1Panel 官方应用商店中的 Octop 应用](https://github.com/1Panel-dev/appstore/tree/dev/apps/octop) 配置。容器使用国内镜像，`full` 版本对应 `ghcr.nju.edu.cn/tencentcloud/octop:full`，`latest` 版本对应 `ghcr.nju.edu.cn/tencentcloud/octop:latest`，均带有 Watchcow 与 Watchtower 自动更新标签。
 
 ## 主要功能
 

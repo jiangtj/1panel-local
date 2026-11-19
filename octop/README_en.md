@@ -2,7 +2,9 @@
 
 **Octop** is an open-source, self-hosted AI assistant from Tencent Cloud for individuals, families, and small teams, with multi-user and multi-agent collaboration, long-term memory, knowledge bases, and multi-channel access, keeping data on your own machine.
 
-This app is based on the [Octop app in the official 1Panel App Store](https://github.com/1Panel-dev/appstore/tree/dev/apps/octop). It uses the domestic mirror `ghcr.nju.edu.cn/tencentcloud/octop:full` (including the web desktop) and includes Watchcow and Watchtower auto-update labels.
+Two versions are provided: `full` (complete build with remote desktop control, OCR, and local embedding) and `latest` (standard build with a smaller image size).
+
+This app is based on the [Octop app in the official 1Panel App Store](https://github.com/1Panel-dev/appstore/tree/dev/apps/octop). It uses domestic mirrors: `ghcr.nju.edu.cn/tencentcloud/octop:full` for the `full` version and `ghcr.nju.edu.cn/tencentcloud/octop:latest` for the `latest` version, both with Watchcow and Watchtower auto-update labels.
 
 ## Features
 
