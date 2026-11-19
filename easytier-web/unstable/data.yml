@@ -16,8 +16,8 @@ additionalProperties:
         zh: "Web UI 端口"
         tr: "Web UI Bağlantı Noktası"
       description:
-        en: "Host port mapped to container port 11211, serving the web console and API. Open http://<server-ip>:<this-port> in a browser."
-        zh: "容器 11211 端口对应的宿主机端口，提供 Web 控制台与 API。浏览器访问 http://服务器IP:此端口。"
+        en: "Host port mapped to container port 11211, serving the web console and API. When no API access URL is set, open http://<server-ip>:<this-port>; with a reverse proxy this port is the upstream target."
+        zh: "容器 11211 端口对应的宿主机端口，提供 Web 控制台与 API。未填写 API 访问地址时，浏览器访问 http://服务器IP:此端口；反向代理时该端口作为上游目标。"
       required: true
       rule: paramPort
       type: number
@@ -42,3 +42,23 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: ""
+      envKey: API_HOST
+      labelEn: "API Access URL"
+      labelZh: "API 访问地址"
+      label:
+        en: "API Access URL"
+        es-es: "URL de acceso a la API"
+        ja: "API アクセス URL"
+        ms: "URL Akses API"
+        pt-br: "URL de acesso da API"
+        ru: "URL доступа к API"
+        ko: "API 접속 URL"
+        zh-Hant: "API 存取位址"
+        zh: "API 访问地址"
+        tr: "API Erisim URL'si"
+      description:
+        en: "Optional. Full base URL browsers use to reach the web console API, for example https://easytier.example.com when accessed through a domain or reverse proxy. Do not add a trailing slash. Leave empty to use http://<server-ip>:<web-ui-port>."
+        zh: "可选。浏览器访问 Web 控制台 API 使用的完整地址，例如通过域名/反向代理访问时填写 https://easytier.example.com，请勿以斜杠结尾。留空则使用 http://服务器IP:Web UI端口。"
+      required: false
+      type: text

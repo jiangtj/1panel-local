@@ -10,13 +10,21 @@ services:
       - "${PANEL_APP_PORT_CONFIG}:22020/udp"
     environment:
       TZ: Asia/Shanghai
+      API_HOST: "${API_HOST}"
+      HOST_IP: "${HOST_IP}"
+      PANEL_APP_PORT_HTTP: "${PANEL_APP_PORT_HTTP}"
     volumes:
       - ./data:/data
-    command: "--api-server-port 11211 --api-host http://${HOST_IP}:${PANEL_APP_PORT_HTTP} --config-server-port 22020 --config-server-protocol udp --db /data/et.db"
     entrypoint:
       - /sbin/tini
       - "--"
-      - easytier-web-embed
+      - /bin/sh
+      - -c
+    command:
+      - >-
+        exec easytier-web-embed --api-server-port 11211
+        --api-host "$${API_HOST:-http://$$HOST_IP:$$PANEL_APP_PORT_HTTP}"
+        --config-server-port 22020 --config-server-protocol udp --db /data/et.db
     healthcheck:
       test:
         - CMD-SHELL
