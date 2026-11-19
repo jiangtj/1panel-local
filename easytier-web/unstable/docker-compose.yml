@@ -34,7 +34,12 @@ services:
       retries: 5
       start_period: 30s
     labels:
-      createdBy: Apps
+      createdBy: "Apps"
+      com.centurylinklabs.watchtower.enable: "true"
+      watchcow.enable: "true"
+      watchcow.title: "EasyTier Web"
+      watchcow.service_port: "${PANEL_APP_PORT_HTTP}"
+      watchcow.icon: "file:///opt/1panel/resource/apps/local/easytier-web/logo.png"
 networks:
   1panel-network:
     external: true
