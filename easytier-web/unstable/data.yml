@@ -1,0 +1,44 @@
+additionalProperties:
+  formFields:
+    - default: 11211
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: "Web UI Port"
+      labelZh: "Web UI 端口"
+      label:
+        en: "Web UI Port"
+        es-es: "Puerto web"
+        ja: "Web UIポート"
+        ms: "Port Web UI"
+        pt-br: "Porta da Web UI"
+        ru: "Порт веб-интерфейса"
+        ko: "웹 UI 포트"
+        zh-Hant: "Web UI 埠"
+        zh: "Web UI 端口"
+        tr: "Web UI Bağlantı Noktası"
+      description:
+        en: "Host port mapped to container port 11211, serving the web console and API. Open http://<server-ip>:<this-port> in a browser."
+        zh: "容器 11211 端口对应的宿主机端口，提供 Web 控制台与 API。浏览器访问 http://服务器IP:此端口。"
+      required: true
+      rule: paramPort
+      type: number
+    - default: 22020
+      envKey: PANEL_APP_PORT_CONFIG
+      labelEn: "Config Server Port"
+      labelZh: "配置下发端口"
+      label:
+        en: "Config Server Port"
+        es-es: "Puerto del servidor de configuracion"
+        ja: "設定配信ポート"
+        ms: "Port Pelayan Konfigurasi"
+        pt-br: "Porta do servidor de configuracao"
+        ru: "Порт сервера конфигурации"
+        ko: "구성 서버 포트"
+        zh-Hant: "設定下發埠"
+        zh: "配置下发端口"
+        tr: "Yapilandirma Sunucusu Baglanti Noktasi"
+      description:
+        en: "Host UDP port mapped to container port 22020 for configuration delivery. easytier-core nodes connect with -w udp://<server-ip>:<this-port>/<username>."
+        zh: "容器 22020/UDP 端口对应的宿主机端口，用于向 easytier-core 节点下发配置。节点使用 -w udp://服务器IP:此端口/用户名 连接。"
+      required: true
+      rule: paramPort
+      type: number

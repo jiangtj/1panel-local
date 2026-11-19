@@ -7,6 +7,7 @@
 - **[Magpie](./magpie/README.md)**：本地模型网关，同时支持 OpenAI、Anthropic 与 Gemini API 并互相转换，让任意编码 Agent 使用任意厂商的模型。
 - **[Octop](./octop/README.md)**：腾讯云开源的自托管 AI 助手，支持多用户、多 Agent、长期记忆、知识库和多渠道接入。
 - **[Cloudflare Mesh](./cloudflare-mesh/README.md)**：把服务器接入 Cloudflare 的网状网络，并可作为转发网关为其他设备提供出网能力。
+- **[EasyTier Web](./easytier-web/README.md)**：EasyTier 自建 Web 控制台，可集中管理节点并通过 UDP 向 easytier-core 下发配置。
 
 ## 一键部署
 
@@ -60,6 +61,6 @@ curl -fsSL https://cnb.cool/jiangtj/1panel-local/-/git/raw/master/install.sh | s
 
 ## 手动部署
 
-不使用脚本时，也可自行下载仓库归档，把其中的应用目录（`clash-rule`、`cloudflare-mesh`、`fns`、`magpie`、`octop`、`subconverter`）复制到 `/opt/1panel/resource/apps/local` 下，再按上面的方式更新应用列表。
+不使用脚本时，也可自行下载仓库归档，把其中的应用目录（`clash-rule`、`cloudflare-mesh`、`easytier-web`、`fns`、`magpie`、`octop`、`subconverter`）复制到 `/opt/1panel/resource/apps/local` 下，再按上面的方式更新应用列表。
 
 国内归档包地址：`https://cnb.cool/jiangtj/1panel-local/-/git/archive/master.zip`（解压后没有顶层目录）；GitHub 归档包地址：`https://github.com/jiangtj/1panel-local/archive/refs/heads/master.zip`（解压后为 `1panel-local-master/` 目录）。

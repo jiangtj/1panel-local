@@ -1,0 +1,34 @@
+name: "EasyTier Web"
+tags:
+  - Network
+  - Tool
+title: "EasyTier Web - 自建 Web 控制台"
+description: "以 Docker 方式运行 EasyTier 的 Web 控制台（easytier-web-embed），提供网页界面与配置下发服务，用于注册账户、集中管理 EasyTier 节点、查看节点状态与日志，并通过 UDP 端口为 easytier-core 节点下发配置。"
+additionalProperties:
+  key: easytier-web
+  name: "EasyTier Web"
+  tags:
+    - Network
+    - Tool
+  shortDescZh: "EasyTier 自建 Web 控制台与配置下发服务"
+  shortDescEn: "Self-hosted EasyTier web console and configuration delivery service"
+  description:
+    en: "Runs the EasyTier web console (easytier-web-embed) in Docker. It serves the web UI and the configuration delivery service, letting you register accounts, centrally manage EasyTier nodes, view node status and logs, and deliver configuration to easytier-core nodes over UDP."
+    es-es: "Ejecuta la consola web de EasyTier (easytier-web-embed) en Docker. Ofrece la interfaz web y el servicio de entrega de configuracion, permite registrar cuentas, administrar de forma centralizada los nodos de EasyTier, ver su estado y registros, y entregar configuracion a los nodos easytier-core por UDP."
+    ja: "EasyTier の Web コンソール（easytier-web-embed）を Docker で実行します。Web UI と設定配信サービスを提供し、アカウント登録、EasyTier ノードの集中管理、ノード状態とログの確認、UDP による easytier-core ノードへの設定配信ができます。"
+    ms: "Menjalankan konsol web EasyTier (easytier-web-embed) dalam Docker. Ia menyediakan UI web dan perkhidmatan penghantaran konfigurasi, membolehkan pendaftaran akaun, pengurusan nod EasyTier secara berpusat, paparan status dan log nod, serta penghantaran konfigurasi kepada nod easytier-core melalui UDP."
+    pt-br: "Executa o console web do EasyTier (easytier-web-embed) no Docker. Ele fornece a interface web e o servico de entrega de configuracao, permitindo registrar contas, gerenciar centralizadamente os nos do EasyTier, ver o status e os logs dos nos e entregar configuracao aos nos easytier-core via UDP."
+    ru: "Запускает веб-консоль EasyTier (easytier-web-embed) в Docker. Она предоставляет веб-интерфейс и службу доставки конфигурации: позволяет регистрировать учетные записи, централизованно управлять узлами EasyTier, просматривать их состояние и журналы и передавать конфигурацию узлам easytier-core по UDP."
+    ko: "EasyTier 웹 콘솔(easytier-web-embed)을 Docker로 실행합니다. 웹 UI와 구성 전달 서비스를 제공하여 계정 등록, EasyTier 노드 중앙 관리, 노드 상태와 로그 확인, UDP를 통한 easytier-core 노드 구성 전달을 지원합니다."
+    zh-Hant: "以 Docker 方式執行 EasyTier 的 Web 控制台（easytier-web-embed），提供網頁介面與設定下發服務，用於註冊帳戶、集中管理 EasyTier 節點、檢視節點狀態與日誌，並透過 UDP 連接埠為 easytier-core 節點下發設定。"
+    zh: "以 Docker 方式运行 EasyTier 的 Web 控制台（easytier-web-embed），提供网页界面与配置下发服务，用于注册账户、集中管理 EasyTier 节点、查看节点状态与日志，并通过 UDP 端口为 easytier-core 节点下发配置。"
+    tr: "EasyTier web konsolunu (easytier-web-embed) Docker icinde calistirir. Web arayuzu ve yapilandirma dagitim hizmeti sunar; hesap kaydi, EasyTier dugumlerinin merkezi yonetimi, dugum durumu ve gunluklerinin goruntulenmesi ve easytier-core dugumlerine UDP uzerinden yapilandirma dagitimi saglar."
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  website: https://easytier.cn/
+  github: https://github.com/EasyTier/EasyTier
+  document: https://easytier.cn/guide/network/web-console.html

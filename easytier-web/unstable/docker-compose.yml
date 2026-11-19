@@ -1,0 +1,32 @@
+services:
+  easytier-web:
+    image: easytier/easytier:unstable
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:11211"
+      - "${PANEL_APP_PORT_CONFIG}:22020/udp"
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ./data:/data
+    command: "--api-server-port 11211 --api-host http://${HOST_IP}:${PANEL_APP_PORT_HTTP} --config-server-port 22020 --config-server-protocol udp --db /data/et.db"
+    entrypoint:
+      - /sbin/tini
+      - "--"
+      - easytier-web-embed
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "wget -q -O /dev/null http://127.0.0.1:11211/ || exit 1"
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
