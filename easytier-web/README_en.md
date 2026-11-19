@@ -2,6 +2,8 @@
 
 **EasyTier Web** is the EasyTier web console, running the front-end and back-end combined easytier-web-embed binary for self-hosted, centralized EasyTier node management.
 
+This app is available in two channels: `latest` (upstream stable release) and `unstable` (rolling build).
+
 ## Features
 
 - **Centralized Node Management**: Register accounts, view node status, configure node parameters and read logs in the browser.

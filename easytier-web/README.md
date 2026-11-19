@@ -2,6 +2,8 @@
 
 **EasyTier Web** 是 EasyTier 的 Web 控制台，运行时采用前后端一体的 easytier-web-embed，可自建用于集中管理 EasyTier 节点。
 
+本应用提供 `latest`（上游稳定发布）与 `unstable`（滚动构建）两个版本。
+
 ## 主要功能
 
 - **节点集中管理**：在网页中注册账户、查看节点状态、配置节点参数并查看节点日志。
