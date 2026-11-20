@@ -162,5 +162,5 @@ cat <<EOF
 
 下一步：
   1. 打开 1Panel「应用商店 → 本地应用」，点击「更新应用列表」
-  2. 在列表中找到目标应用（如 Clash Rule、Subconverter、Fast Note Sync、magpie、Cloudflare Mesh、EasyTier Web）直接安装
+  2. 在列表中找到目标应用（如 Clash Rule、Subconverter、Fast Note Sync、magpie、Cloudflare Mesh、EasyTier Web、EasyTier Shared）直接安装
 EOF

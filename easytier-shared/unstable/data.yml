@@ -1,0 +1,68 @@
+additionalProperties:
+  formFields:
+    - default: 31010
+      envKey: PANEL_APP_PORT_LISTEN
+      labelEn: "Listen Port"
+      labelZh: "监听端口"
+      label:
+        en: "Listen Port"
+        es-es: "Puerto de escucha"
+        ja: "待ち受けポート"
+        ms: "Port Dengar"
+        pt-br: "Porta de escuta"
+        ru: "Порт прослушивания"
+        ko: "수신 포트"
+        zh-Hant: "監聽埠"
+        zh: "监听端口"
+        tr: "Dinleme Baglanti Noktasi"
+      description:
+        en: "Host TCP and UDP port mapped to container port 11010, the shared node's listening port. Other nodes connect with udp://<server-ip>:<this-port> or tcp://<server-ip>:<this-port>; open both TCP and UDP in the firewall."
+        zh: "宿主机 TCP 与 UDP 端口，映射到容器 11010，作为共享节点的监听端口。其他节点用 udp://服务器IP:此端口 或 tcp://服务器IP:此端口 连接，防火墙需同时放行 TCP 与 UDP。"
+      required: true
+      rule: paramPort
+      type: number
+    - default: "true"
+      envKey: RELAY_ENABLED
+      labelEn: "Data Relay"
+      labelZh: "数据转发"
+      label:
+        en: "Data Relay"
+        es-es: "Retransmision de datos"
+        ja: "データ中継"
+        ms: "Geganti Data"
+        pt-br: "Retransmissao de dados"
+        ru: "Пересылка данных"
+        ko: "데이터 중계"
+        zh-Hant: "資料轉送"
+        zh: "数据转发"
+        tr: "Veri Aktarimi"
+      description:
+        en: "On: relay traffic for the virtual networks allowed by the whitelist, i.e. a public shared node. Off: only help other nodes establish P2P links without relaying any payload (equivalent to --relay-network-whitelist --relay-all-peer-rpc)."
+        zh: "开启：按白名单为其他虚拟网络转发数据流量，即官方文档中的公共共享节点。关闭：只帮助其他节点建立 P2P 连接、不转发任何数据包（等价于 --relay-network-whitelist --relay-all-peer-rpc）。"
+      required: true
+      type: select
+      values:
+        - label: "开启转发 / Relay on"
+          value: "true"
+        - label: "关闭转发（仅帮助建链）/ Relay off, bootstrap only"
+          value: "false"
+    - default: "*"
+      envKey: RELAY_NETWORK_WHITELIST
+      labelEn: "Relay Whitelist"
+      labelZh: "转发白名单"
+      label:
+        en: "Relay Whitelist"
+        es-es: "Lista blanca de retransmision"
+        ja: "中継ホワイトリスト"
+        ms: "Senarai Putih Geganti"
+        pt-br: "Lista branca de retransmissao"
+        ru: "Белый список сетей"
+        ko: "중계 화이트리스트"
+        zh-Hant: "轉送白名單"
+        zh: "转发白名单"
+        tr: "Aktarma Beyaz Listesi"
+      description:
+        en: "Only used when data relay is on. Space-separated network name wildcards, for example home* office-*. Use * or leave empty to relay every network. Ignored when data relay is off."
+        zh: "仅在开启数据转发时生效。空格分隔的网络名通配符列表，例如 home* office-*；填 * 或留空表示转发所有网络。关闭数据转发时该项被忽略。"
+      required: false
+      type: text

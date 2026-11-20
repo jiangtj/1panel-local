@@ -1,0 +1,39 @@
+services:
+  easytier-shared:
+    image: easytier/easytier:latest
+    hostname: easytier-shared
+    container_name: "${CONTAINER_NAME}"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_LISTEN}:11010/tcp"
+      - "${PANEL_APP_PORT_LISTEN}:11010/udp"
+    environment:
+      TZ: Asia/Shanghai
+      RELAY_ENABLED: "${RELAY_ENABLED}"
+      RELAY_NETWORK_WHITELIST: "${RELAY_NETWORK_WHITELIST}"
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    entrypoint:
+      - /sbin/tini
+      - "--"
+      - /bin/sh
+      - -c
+    command:
+      - |
+        set -e
+        if [ "$${RELAY_ENABLED:-true}" = "false" ]; then
+          set -- --relay-network-whitelist --relay-all-peer-rpc
+        else
+          set -- --relay-network-whitelist "$${RELAY_NETWORK_WHITELIST:-*}"
+        fi
+        exec easytier-core "$$@"
+    labels:
+      createdBy: "Apps"
+      com.centurylinklabs.watchtower.enable: "true"
+networks:
+  1panel-network:
+    external: true

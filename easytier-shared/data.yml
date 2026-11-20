@@ -1,0 +1,35 @@
+name: "EasyTier Shared"
+tags:
+  - Network
+  - Tool
+title: "EasyTier Shared - 公共共享节点"
+description: "以 Docker 方式运行 EasyTier 共享节点（公共中继服务器），为没有公网 IP 的节点提供中继与节点发现能力，并可按需开关数据转发、按网络名白名单限定转发范围。"
+additionalProperties:
+  key: easytier-shared
+  name: "EasyTier Shared"
+  tags:
+    - Network
+    - Tool
+  shortDescZh: "为无公网 IP 的节点提供中继与发现的 EasyTier 共享节点"
+  shortDescEn: "EasyTier shared node that relays traffic and helps nodes without a public IP discover each other"
+  description:
+    en: "Runs an EasyTier shared node (public relay server) in Docker, so nodes without a public IP can relay traffic and discover each other. Data relaying can be switched on or off, and a network-name whitelist with wildcard support limits which virtual networks are relayed."
+    es-es: "Ejecuta un nodo compartido de EasyTier (servidor de retransmision publico) en Docker, de modo que los nodos sin IP publica puedan retransmitir trafico y descubrirse entre si. La retransmision de datos se puede activar o desactivar y una lista blanca de nombres de red con comodines limita que redes virtuales se retransmiten."
+    ja: "EasyTier の共有ノード（公開リレーサーバー）を Docker で実行し、グローバル IP を持たないノード同士が中継と相互発見を行えるようにします。データ中継はオン/オフを切り替えでき、ワイルドカード対応のネットワーク名ホワイトリストで中継対象の仮想ネットワークを限定できます。"
+    ms: "Menjalankan nod kongsi EasyTier (pelayan geganti awam) dalam Docker supaya nod tanpa IP awam boleh menggantikan trafik dan menemui satu sama lain. Geganti data boleh dihidupkan atau dimatikan, dan senarai putih nama rangkaian dengan sokongan wildcard mengehadkan rangkaian maya yang digeganti."
+    pt-br: "Executa um no compartilhado do EasyTier (servidor de retransmissao publico) no Docker, para que nos sem IP publico possam retransmitir trafego e se descobrir. A retransmissao de dados pode ser ligada ou desligada, e uma lista branca de nomes de rede com suporte a curingas limita quais redes virtuais sao retransmitidas."
+    ru: "Запускает общий узел EasyTier (публичный сервер ретрансляции) в Docker, чтобы узлы без публичного IP могли передавать трафик через него и находить друг друга. Пересылку данных можно включать и выключать, а белый список имен сетей с поддержкой подстановочных знаков ограничивает, для каких виртуальных сетей выполняется пересылка."
+    ko: "공인 IP가 없는 노드가 서로 중계하고 발견할 수 있도록 EasyTier 공유 노드(공용 릴레이 서버)를 Docker로 실행합니다. 데이터 중계를 켜거나 끌 수 있으며, 와일드카드를 지원하는 네트워크 이름 화이트리스트로 중계할 가상 네트워크를 제한할 수 있습니다."
+    zh-Hant: "以 Docker 方式執行 EasyTier 共享節點（公共中繼伺服器），為沒有公網 IP 的節點提供中繼與節點發現能力，並可依需開關資料轉送、依網路名稱白名單限定轉送範圍。"
+    zh: "以 Docker 方式运行 EasyTier 共享节点（公共中继服务器），为没有公网 IP 的节点提供中继与节点发现能力，并可按需开关数据转发、按网络名白名单限定转发范围。"
+    tr: "Genel IP adresi olmayan dugumlerin trafik aktarabilmesi ve birbirini kesfedebilmesi icin EasyTier paylasilan dugumunu (genel aktarma sunucusu) Docker icinde calistirir. Veri aktarimi acilip kapatilabilir ve joker karakter destekli ag adi beyaz listesi hangi sanal aglarin aktarilacagini sinirlar."
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  architectures:
+    - amd64
+    - arm64
+  recommend: 0
+  website: https://www.easytier.cn/
+  github: https://github.com/EasyTier/EasyTier
+  document: https://www.easytier.cn/guide/network/host-public-server.html
